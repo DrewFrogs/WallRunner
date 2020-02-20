@@ -14,14 +14,14 @@ namespace WallRunner.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
+            TabLayoutResource = Resource.Layout.MainMenu;
 
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            SetContentView(Resource.Layout.Tabbar);
+            SetContentView(Resource.Layout.MainMenu);
 
             LoadApplication(new App());
         }
