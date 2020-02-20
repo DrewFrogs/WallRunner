@@ -14,14 +14,16 @@ namespace WallRunner.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.MainMenu;
+            int MenuBox = Resource.Layout.MainMenu;
+
+            RelativeLayout MainMenu = (RelativeLayout)FindViewById(Resource.id.MainMenuLayout);
 
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            SetContentView(Resource.Layout.MainMenu);
+            SetContentView(MenuBox);
 
             LoadApplication(new App());
         }

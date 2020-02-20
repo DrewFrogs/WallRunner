@@ -6,12 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/MainMenuLayout">
+    <ImageView
+        android:src="@drawable/skylight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/MainMenuImage"
+        android:scaleType="center" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:gravity="center"
         android:id="@+id/GameTitle"
         android:text="Wall Runner"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:textSize="40dp"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:id="@+id/GameStartText"
+        android:text="Touch To Play"
         android:layout_height="match_parent"
-        android:textColor="@android:color/background_dark" />
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/white" />
 </RelativeLayout>
