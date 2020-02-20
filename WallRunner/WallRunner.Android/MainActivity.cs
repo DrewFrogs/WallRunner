@@ -15,8 +15,7 @@ namespace WallRunner.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             int MenuBox = Resource.Layout.MainMenu;
-
-            RelativeLayout MainMenu = (RelativeLayout)FindViewById(Resource.id.MainMenuLayout);
+            int GameView = Resource.Layout.GameScreen;
 
             base.OnCreate(savedInstanceState);
 
@@ -24,6 +23,14 @@ namespace WallRunner.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             SetContentView(MenuBox);
+
+            //setting click litener to mainmenu screen
+            RelativeLayout MainMenu = (RelativeLayout)FindViewById(Resource.Id.MainMenuLayout);
+            MainMenu.Click += (sender, e) =>
+            {
+                SetContentView(GameView);
+                //Move to next screen
+            };
 
             LoadApplication(new App());
         }
